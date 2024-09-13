@@ -1,0 +1,43 @@
+ar
+   numero, pares, impares, total: inteiro
+   perc_pares, perc_impares: real
+
+inicio
+   // Inicializa as variáveis
+   pares <- 0
+   impares <- 0
+   total <- 0
+
+   // Início do loop
+   escreva("Digite um número (0 para terminar): ")
+   leia(numero)
+
+   enquanto numero <> 0 faca
+      // Verifica se o número é par ou ímpar
+      se numero % 2 = 0 entao
+         pares <- pares + 1
+      senao
+         impares <- impares + 1
+      fimse
+
+      total <- total + 1
+
+      // Solicita o próximo número
+      escreva("Digite um número (0 para terminar): ")
+      leia(numero)
+   fimenquanto
+
+   // Calcula as porcentagens
+   se total <> 0 entao
+      perc_pares <- (pares / total) * 100
+      perc_impares <- (impares / total) * 100
+
+      // Exibe os resultados
+      escreval("Quantidade de números pares: ", pares)
+      escreval("Quantidade de números ímpares: ", impares)
+      escreval("Porcentagem de pares: ", perc_pares, "%")
+      escreval("Porcentagem de ímpares: ", perc_impares, "%")
+   senao
+      escreval("Nenhum número foi digitado.")
+   fimse
+fimalgoritmo
